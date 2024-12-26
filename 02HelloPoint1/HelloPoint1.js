@@ -5,8 +5,8 @@
 //顶点着色器程序
 var VSHADER_SOURCE =
     'void main() {\n' +
-    'gl_Position = vec4(0.5, 0.0, 0.0, 1.0);\n' + //设置坐标
-    'gl_PointSize = 50.0;\n' + //设置尺寸
+    'gl_Position = vec4(0, 0, 0.0, 1.0);\n' + //设置坐标
+    'gl_PointSize = 25.0;\n' + //设置尺寸
     '}\n';
 
 //片元着色器程序
@@ -17,6 +17,9 @@ var FSHADER_SOURCE=
 
 function main() {
     var canvas = document.getElementById('webgl');
+    //const devicePixelRatio = window.devicePixelRatio || 1;
+    //canvas.width = canvas.clientWidth * devicePixelRatio;
+    //canvas.height = canvas.clientHeight * devicePixelRatio;
 
     var gl = getWebGLContext(canvas);
     if(!gl)
@@ -36,7 +39,3 @@ function main() {
 
     gl.drawArrays(gl.POINTS, 0, 1);
 }
-
-
-
-

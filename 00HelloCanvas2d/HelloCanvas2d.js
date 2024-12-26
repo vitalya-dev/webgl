@@ -21,5 +21,5 @@ function main() {
 	 width        矩形的宽度
 	 height   矩形的高度
 	 */
-	ctx.fillRect(120, 10, 150, 150);
+	ctx.fillRect(240, 10, 150, 2000);
 }

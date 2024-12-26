@@ -64,10 +64,10 @@ function  main() {
 function initVertexBuffers(gl){
     var verticesTexCoords = new Float32Array(
         [
-            -0.5, 0.5, 0.0, 1.0,
-            -0.5, -0.5, 0.0, 0.0,
-            0.5, 0.5, 1.0, 1.0,
-            0.5, -0.5, 1.0, 0.0,
+            -1, 1, 0.0, 1.0,
+            -1, -1, 0.0, 0.0,
+            1, 1, 1.0, 1.0,
+            1, -1, 1.0, 0.0,
         ]
     );
     var n=4;//顶点数目

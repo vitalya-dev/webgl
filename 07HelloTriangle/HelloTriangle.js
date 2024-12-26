@@ -3,17 +3,20 @@
  */
 //HelloTriangle.js
 //顶点着色器程序
-var VSHADER_SOURCE =
-    'attribute vec4 a_Position;'+
-    'void main(){'+
-    'gl_Position=a_Position;'+
-    '}';
+const VSHADER_SOURCE = `
+attribute vec4 a_Position;
+void main() {
+    gl_Position = a_Position;
+}
+`;
 
 //片元着色器程序
-var FSHADER_SOURCE=
-    'void main(){'+
-    'gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);'+
-    '}';
+
+const FSHADER_SOURCE = `
+void main() {
+    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+}
+`;
 
 function main() {
     //获取canvas元素
@@ -51,7 +54,7 @@ function main() {
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     //绘制三个点
-    gl.drawArrays(gl.LINE_LOOP, 0, n);
+    gl.drawArrays(gl.LINES, 0, n);
 }
 
 function initVertexBuffers(gl) {
